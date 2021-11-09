@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+      <title>Ethnicity of students</title>
+    </head>
+
+    <style type="text/css">
+      body{
+        background-color:#cc6600;
+      }
+      #myChart{
+        border: 2px solid orange;
+        border-radius: 10px;
+        background-color: #ffffcc;
+        padding: 40px;
+      }
+      h1{
+        color: white;
+      } 
+    </style>
+
+  <body>
+  
+    <div style="text-align: center;">
+      <h1 >ETHNICITY OF STUDENTS</h1>  
+    </div>
+      
+    <canvas id="myChart" style="width:100%;max-width:600px;margin: auto; margin-top: 20px;"></canvas>
+
+    <script>     
+      var xValues = ["Asian", "Black", "Spain", "Hispanic", "Native American", "Pacific Islander", "White"];
+      var yValues = [36.1, 5.8, 5.3, 17.1, 0.6, 1, 24.5];
+      var barColors = ["red", "green","blue","orange","brown","Black","yellow"];
+
+      new Chart("myChart", {
+      type: "bar",
+      data: {
+            labels: xValues,
+            datasets: [{
+              backgroundColor: barColors,
+              data: yValues
+            }]
+            },
+      options: {
+            legend: {display: false},
+            title: {
+              display: true,
+                   }
+                }
+                });
+    </script>
+  </body>
+</html>
